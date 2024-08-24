@@ -21,14 +21,14 @@ To schedule the script to run automatically using cron, follow these steps:
 
    ```bash
    crontab -e #Write the following cmd at the end of the cron table
-   0 0 * * * bash /mnt/c/Users/lohit/Desktop/Spring_24/CS3500/Bashing/backup.sh -s /mnt/c/Users/lohit/Desktop/Spring_24/src/ -d /mnt/c/Users/lohit/Desktop/Spring_24/dest/ -o /mnt/c/Users/lohit/Desktop/i1.csv
+   0 0 * * * bash /path/to/backup.sh -s /path/to/src/ -d /path/to/dest/ -o /path/to/stats.csv
 
-     bash /mnt/c/Users/lohit/Desktop/Spring_24/CS3500/Bashing/backup.sh:  Path to your backup script.
-     -s /mnt/c/Users/lohit/Desktop/Spring_24/src/:    Source directory.
-     -d /mnt/c/Users/lohit/Desktop/Spring_24/dest/:    Destination directory.
-     -o /mnt/c/Users/lohit/Desktop/i1.csv:      Statistics log file.
+     bash /path/to/backup.sh:  Path to your backup script.
+     -s /path/to/src/:    Source directory.
+     -d /path/to/dest/:    Destination directory.
+     -o /path/to/stats.csv:      Statistics log file.
 
-### Explanation of Each Field
+### Explanation of Each Field for the first five postions in the crontab_setup
 
     1. Minute (0 - 59):
     - Specifies the minute of the hour when the job should run. * means every minute.
